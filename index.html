@@ -1,0 +1,84 @@
+<html>
+<head> 
+     <title>Website Design using HTML and CSS</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel= href="sign-in.css">
+</head>
+<body>
+    <div class="main"> 
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><button onclick="location.href='login_signup.html'">Sign-In/Sign-Up</button></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PHONE</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">CART</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/mobile.png" class="mobile">
+            <div id="circle">
+                <div class="features one">
+                    <img src="images/camera.png">
+                    <div>
+                        <head>Camera</head>
+                        <p>12MP, wide angle lens</p>
+                    </div>
+                </div>
+                <div class="features two">
+                    <img src="images/processor.png">
+                    <div>
+                        <head>Processor</head>
+                        <p>Snapdragon Octa-core 11nm</p>
+                    </div>
+                </div>
+                <div class="features three">
+                    <img src="images/display.png">
+                    <div>
+                        <head>Display</head>
+                        <p>6.5 Mini-Drop Fullscrean</p>
+                    </div>
+                </div>
+                <div class="features four">
+                    <img src="images/battery.png">
+                    <div>
+                        <head>Battery</head>
+                        <p>5000mAh ,720Hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h3>Features</h3>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+    </div>
+    <script>
+        var circle=document.getElementById("circle")
+        var upBtn=document.getElementById("upBtn")
+        var downBtn=document.getElementById("downBtn")
+        var rotateval=circle.style.transform;
+        var rotatesum
+        upBtn.onclick=function()
+        {
+            rotatesum=rotateval+"rotate(-90deg)";
+            circle.style.transform=rotatesum;
+            rotateval=rotatesum;
+        }
+        downBtn.onclick=function()
+        {
+            rotatesum=rotateval+"rotate(90deg)";
+            circle.style.transform=rotatesum;
+            rotateval=rotatesum;
+        }
+    </script>
+</body>
+</html>
